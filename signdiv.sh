@@ -25,7 +25,7 @@ A4_ROWS=16
 A4_LINE_WIDTH=30
 
 # PDF-Wandlungen erlauben für ImageMagick, geht bei Ubuntu-18.04 und neuer
-MAGICK_CONFIGURE_PATH="${D}/imagemagick/:/etc/ImageMagick/"
+MAGICK_CONFIGURE_PATH="${D}/imagemagick/"
 export MAGICK_CONFIGURE_PATH
 
 (

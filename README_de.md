@@ -60,4 +60,4 @@ werden können.
 
 Abhilfe:
 * Ubuntu-18.04 oder neuer: Problem sollte nicht mehr auftreten
-* Ubuntu-16.04 oder älter: "policy.xml" entfernen - `sudo mv /etc/ImageMagick/policy.xml /etc/ImageMagick/policy.xml.deactivated`
+* Ubuntu-16.04 oder älter: "policy.xml" entfernen - `sudo mv /etc/ImageMagick*/policy.xml /etc/ImageMagick*/policy.xml.deactivated`
