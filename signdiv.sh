@@ -1,6 +1,9 @@
 #!/bin/bash
 set -Eeuo pipefail
 
+D="$(dirname "$0")"
+D="$(cd "${D}" && pwd)"
+
 SIGNATURES=$1
 TMPDIR=/tmp/falsisign-${RANDOM}
 
@@ -20,6 +23,10 @@ A4_HEIGHT=$((2970*2))
 A4_COLS=4
 A4_ROWS=16
 A4_LINE_WIDTH=30
+
+# PDF-Wandlungen erlauben für ImageMagick, geht bei Ubuntu-18.04 und neuer
+MAGICK_CONFIGURE_PATH="${D}/imagemagick/:/etc/ImageMagick/"
+export MAGICK_CONFIGURE_PATH
 
 (
  set -x

@@ -38,3 +38,26 @@ Dies ist ein Fork von [https://gitlab.com/edouardklein/falsisign.git](https://gi
 
 * Deutsche Anleitung (diese Datei)
 * Formular in A4
+* PDF-Wandlungen für ImageMagick freischalten für Ubuntu-18.04 und neuer
+
+Probleme
+--------
+
+### PDF-Wandlung klappt nicht - convert: not authorized
+
+Bei der Ausführung von `./signdiv.sh formular.pdf` erscheint eine Fehlermeldung dieser Art:
+
+```
+...
++ convert -density 576 -resize 3560x4752 -transparent white formular.pdf /tmp/falsisign-28220/signatures.png
+convert: not authorized `formular.pdf' @ error/constitute.c/ReadImage/412.
+convert: no images defined `/tmp/falsisign-28220/signatures.png' @ error/convert.c/ConvertImageCommand/3210.
+...
+```
+
+Ursache: Aus Sicherheitsgründen ist ImageMagick auf vielen Systemen so konfiguriert, dass keine PDF-Dateien bearbeitet
+werden können.
+
+Abhilfe:
+* Ubuntu-18.04 oder neuer: Problem sollte nicht mehr auftreten
+* Ubuntu-16.04 oder älter: "policy.xml" entfernen - `sudo mv /etc/ImageMagick/policy.xml /etc/ImageMagick/policy.xml.deactivated`

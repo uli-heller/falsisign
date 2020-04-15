@@ -1,0 +1,3 @@
+<policymap>
+<policy domain="coder" rights="read | write" pattern="PDF" />
+</policymap>
