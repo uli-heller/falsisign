@@ -25,7 +25,6 @@ A4_LINE_WIDTH=30
  set -x
  convert -density 576 -resize ${A4_WIDTH}x${A4_HEIGHT} -transparent white "${SIGNATURES}" "${TMPDIR}/${SIGNATURES_BN}.png"
 )
-ls -l "${TMPDIR}/${SIGNATURES_BN}.png"
 
 DIMENSIONS="$(file "${TMPDIR}/${SIGNATURES_BN}.png" | grep -o "[0-9]* x [0-9]*")"
 WIDTH="$(echo "${DIMENSIONS}"|cut -d " " -f1)"
