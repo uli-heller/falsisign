@@ -27,7 +27,12 @@ Grundsätzliches Vorgehen
 
    Erzeugt Unterschriftendateien im Unterverzeichnis "signatures"
 
-6. PDF-Dokument signieren: `xxx` 
+6. PDF-Dokument signieren: `./falsisign.sh uli.pdf 200x100+550+700 uli-signed.pdf` 
+
+   Es wird zufällig eine der vorhandenen Unterschriften im Unterverzeichnis "signatures" ausgewählt.
+   Momentan funktioniert das nur bei einseitigen PDF-Dokumenten.
+   Breite, Höhe, X-Position und Y-Position in "200x100+550+700" müssen angepasst werden an
+   das PDF-Dokument.
 
 Quelle und Änderungen
 ------
