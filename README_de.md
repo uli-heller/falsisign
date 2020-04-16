@@ -20,10 +20,10 @@ Grundsätzliches Vorgehen
     * hochkant
     * 4 Spalten
     * 16 Zeilen
-2. Formular ausdrucken
+2. Formular ausdrucken - [signatures-empty.pdf](signatures-empty.pdf)
 3. Unterschriften eintragen (4x16 = 64 Unterschriften)
-4. Formular einscannen
-5. Unterschriften splitten: `./signdiv.sh formular.pdf`
+4. Formular einscannen - [signatures-max.pdf](signatures-max.pdf)
+5. Unterschriften splitten: `./signdiv.sh signatures-max.pdf`
 
    Erzeugt Unterschriftendateien im Unterverzeichnis "signatures"
 
@@ -59,5 +59,13 @@ Ursache: Aus Sicherheitsgründen ist ImageMagick auf vielen Systemen so konfigur
 werden können.
 
 Abhilfe:
-* Ubuntu-18.04 oder neuer: Problem sollte nicht mehr auftreten
-* Ubuntu-16.04 oder älter: "policy.xml" entfernen - `sudo mv /etc/ImageMagick*/policy.xml /etc/ImageMagick*/policy.xml.deactivated`
+* Generelle Lösung:
+    1. Wandlung nach PNG mittels `gs`
+    2. Weiterverarbeitung mittels `convert` (=Teil von ImageMagick)
+* Obsolet - Ubuntu-18.04 oder neuer: Problem sollte nicht mehr auftreten
+* Obsolet - Ubuntu-16.04 oder älter: "policy.xml" entfernen - `sudo mv /etc/ImageMagick*/policy.xml /etc/ImageMagick*/policy.xml.deactivated`
+
+Änderungen
+----------
+
+* 2020-04-16: Wandlung mit `gs`, Formular signatures-empty.pdf und Muster-Scan signatures-max.pdf
