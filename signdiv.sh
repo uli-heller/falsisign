@@ -27,7 +27,7 @@ A4_LINE_WIDTH=30
 (
  set -x
  gs -sDEVICE=png16m -dTextAlphaBits=4 -r600 -o ${TMPDIR}/tmp.png "${SIGNATURES}"
- convert -density 576 -resize ${A4_WIDTH}x${A4_HEIGHT} -transparent white "${TMPDIR}/tmp.png" "${TMPDIR}/${SIGNATURES_BN}.png"
+ convert -density 576 -resize ${A4_WIDTH}x${A4_HEIGHT} -fuzz 10% -transparent white "${TMPDIR}/tmp.png" "${TMPDIR}/${SIGNATURES_BN}.png"
 )
 
 DIMENSIONS="$(file "${TMPDIR}/${SIGNATURES_BN}.png" | grep -o "[0-9]* x [0-9]*")"
