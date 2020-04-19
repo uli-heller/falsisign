@@ -12,7 +12,12 @@ Unterschriften vor und fügt diese dann bei Bedarf in die
 PDF-Dateien ein.
 
 Grundsätzliches Vorgehen
---------
+------------------------
+
+Nachfolgend eine kurze Beschreibung der Grundidee
+dieses Projektes. Teile davon müssen nur einmalig
+erledigt werden, Du mußt das nicht mehr machen!
+Gehe am besten direkt nach "Anwendung von diesem Repo"!
 
 1. Formular erstellen für die Unterschriften
     * DIN A4
@@ -27,12 +32,34 @@ Grundsätzliches Vorgehen
 
    Erzeugt Unterschriftendateien im Unterverzeichnis "signatures"
 
-6. PDF-Dokument signieren: `./falsisign.sh uli.pdf 200x100+550+700 uli-signed.pdf` 
+6. PDF-Dokument signieren
+    * Mittels Kommandozeilen-Skript: `./falsisign.sh uli.pdf 200x100+550+700 uli-signed.pdf` 
 
-   Es wird zufällig eine der vorhandenen Unterschriften im Unterverzeichnis "signatures" ausgewählt.
-   Momentan funktioniert das nur bei einseitigen PDF-Dokumenten.
-   Breite, Höhe, X-Position und Y-Position in "200x100+550+700" müssen angepasst werden an
-   das PDF-Dokument.
+      Es wird zufällig eine der vorhandenen Unterschriften im Unterverzeichnis "signatures" ausgewählt.
+       Momentan funktioniert das nur bei einseitigen PDF-Dokumenten.
+      Breite, Höhe, X-Position und Y-Position in "200x100+550+700" müssen angepasst werden an
+      das PDF-Dokument.
+
+    * Manuell: Unterschrift "zufällig" auswählen aus dem Unterordner "signatures" und als Bild einfügen
+      in das Quelldokument
+
+      Das manuelle Unterschreiben klappt für mich mit PDF/LibreOffice nicht sonderlich gut,
+      es gibt Probleme bei der Größenanpassung der Unterschrift und beim Verschieben an die
+      richtige Position
+
+Anwendung von diesem Repo
+-------------------------
+
+- Repo "clonen" (empfohlen) oder ZIP herunterladen und entpacken
+- Formular ausdrucken - [signatures-empty.pdf](signatures-empty.pdf)
+- Unterschriften eintragen (4x16 = 64 Unterschriften)
+- Formular einscannen
+    * Möglichst kein Rand!
+    * Möglichst keine Verzerrung!
+    * Scan-Qualität: Ausprobieren - Foto?
+    * Beispiel-Ergebnis: [signatures-max.pdf](signatures-max.pdf)
+- Unterschriften splitten: `./signdiv.sh signatures-max.pdf` (ersetze "signatures-max.pdf" durch den Dateinamen Deines Scans!)
+- Dokument signieren
 
 Quelle und Änderungen
 ------
