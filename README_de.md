@@ -59,6 +59,7 @@ Anwendung von diesem Repo
     * Scan-Qualität: Ausprobieren - Foto?
     * Beispiel-Ergebnis: [signatures-max.pdf](signatures-max.pdf)
 - Unterschriften splitten: `./signdiv.sh signatures-max.pdf` (ersetze "signatures-max.pdf" durch den Dateinamen Deines Scans!)
+- Beispiel von gesplitteten Unterschriften: [signatures-max](signatures-max)
 - Dokument signieren
     * [uli.pdf](uli.pdf) per Skript: `./falsisign.sh uli.pdf 200x100+550+670 uli-signed.pdf` - [uli-signed.pdf](uli-signed.pdf)
     * [uli.xlsx](uli.xlsx) manuell: Dokument öffnen und eine der Unterschriften aus dem Verzeichnis "signatures" einfügen - [uli-signed.xlsx](uli-signed.xlsx)
