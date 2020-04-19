@@ -9,7 +9,9 @@ lästig, wenn kein Drucker oder Scanner greifbar ist.
 [FALSISIGN](https://gitlab.com/edouardklein/falsisign.git)
 scheint eine Lösung zu bieten: Man bereitet eine Reihe von
 Unterschriften vor und fügt diese dann bei Bedarf in die
-PDF-Dateien ein.
+PDF-Dateien ein. So ähnlich wie dies:
+
+![Unterschrift](signatures-max/signatures-max_1.png)
 
 Grundsätzliches Vorgehen
 ------------------------
