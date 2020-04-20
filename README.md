@@ -27,7 +27,7 @@ Gehe am besten direkt nach "Anwendung von diesem Repo"!
     * hochkant
     * 4 Spalten
     * 16 Zeilen
-2. ganzes Github-Projekt mit "Clone or download" herunterladen und das ZIP entpacken
+2. Github-Projekt mit "Clone or download" herunterladen und das ZIP entpacken
 3. Formular ausdrucken - [signatures-empty.pdf](signatures-empty.pdf)
 4. Unterschriften eintragen (4x16 = 64 Unterschriften)
 5. Formular einscannen - [signatures-max.pdf](signatures-max.pdf)
