@@ -27,14 +27,15 @@ Gehe am besten direkt nach "Anwendung von diesem Repo"!
     * hochkant
     * 4 Spalten
     * 16 Zeilen
-2. Formular ausdrucken - [signatures-empty.pdf](signatures-empty.pdf)
-3. Unterschriften eintragen (4x16 = 64 Unterschriften)
-4. Formular einscannen - [signatures-max.pdf](signatures-max.pdf)
-5. Unterschriften splitten: `./signdiv.sh signatures-max.pdf`
+2. ganzes Github-Projekt mit "Clone or download" herunterladen und das ZIP entpacken
+3. Formular ausdrucken - [signatures-empty.pdf](signatures-empty.pdf)
+4. Unterschriften eintragen (4x16 = 64 Unterschriften)
+5. Formular einscannen - [signatures-max.pdf](signatures-max.pdf)
+6. Unterschriften splitten: `./signdiv.sh signatures-max.pdf`
 
    Erzeugt Unterschriftendateien im Unterverzeichnis "signatures"
 
-6. PDF-Dokument signieren
+7. PDF-Dokument signieren
     * Mittels Kommandozeilen-Skript: `./falsisign.sh uli.pdf 200x100+550+670 uli-signed.pdf` 
 
       Es wird zufällig eine der vorhandenen Unterschriften im Unterverzeichnis "signatures" ausgewählt.
