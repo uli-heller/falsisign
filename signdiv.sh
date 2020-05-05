@@ -23,6 +23,10 @@ A4_HEIGHT=$((2970*2))
 A4_COLS=4
 A4_ROWS=16
 A4_LINE_WIDTH=40
+A4_LEFT=40
+A4_RIGHT=40
+A4_TOP=40
+A4_BOTTOM=40
 
 (
  set -x
@@ -34,19 +38,21 @@ DIMENSIONS="$(file "${TMPDIR}/${SIGNATURES_BN}.png" | grep -o "[0-9]* x [0-9]*")
 WIDTH="$(echo "${DIMENSIONS}"|cut -d " " -f1)"
 HEIGHT="$(echo "${DIMENSIONS}"|cut -d " " -f3)"
 
-FIELD_WIDTH="$((${WIDTH} / ${A4_COLS}))"
-FIELD_HEIGHT="$((${HEIGHT} / ${A4_ROWS}))"
+INNER_WIDTH="$((${WIDTH} - ${A4_LEFT} - ${A4_RIGHT}))"
+INNER_HEIGHT="$((${HEIGHT} - ${A4_TOP} - ${A4_BOTTOM}))"
+FIELD_WIDTH="$((${INNER_WIDTH} / ${A4_COLS}))"
+FIELD_HEIGHT="$((${INNER_HEIGHT} / ${A4_ROWS}))"
 SIGNATURE_WIDTH="$((${FIELD_WIDTH} - ${A4_LINE_WIDTH}))"
 SIGNATURE_HEIGHT="$((${FIELD_HEIGHT} - ${A4_LINE_WIDTH}))"
 
-X0="$((${A4_LINE_WIDTH} / 2))"
-Y0="$((${A4_LINE_WIDTH} / 2))"
+X0="$((${A4_LEFT} + ${A4_LINE_WIDTH} / 2))"
+Y0="$((${A4_TOP} + ${A4_LINE_WIDTH} / 2))"
 
 mkdir -p signatures
 CNT=1
-for X in $(seq ${X0} ${FIELD_WIDTH} ${WIDTH})
+for X in $(seq ${X0} ${FIELD_WIDTH} ${INNER_WIDTH})
 do
-    for Y in $(seq ${Y0} ${FIELD_HEIGHT} ${HEIGHT})
+    for Y in $(seq ${Y0} ${FIELD_HEIGHT} ${INNER_HEIGHT})
     do
         (
          set -x
