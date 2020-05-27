@@ -71,7 +71,7 @@ erledigt werden, Du mußt das nicht mehr machen!
       Besser geht's mit Tabellen:
         * XLS: [timesheet.xls](timesheet.xls), mit Unterschrift: [timesheet-signed.xls](timesheet-signed.xls)
         * XLSX: [uli.xlsx](uli.xlsx), mit Unterschrift: [uli-signed.xlsx](uli-signed.xlsx)
-        * ODS: [time](timesheet.ods), mit Unterschrift: [timesheet-signed.ods](timesheet-signed.ods)
+        * ODS: [timesheet.ods](timesheet.ods), mit Unterschrift: [timesheet-signed.ods](timesheet-signed.ods)
 
 Quelle und Änderungen
 ------
